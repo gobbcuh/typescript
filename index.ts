@@ -29,5 +29,14 @@ func('jasmin');     // still no error since age is optional
 type Data = string | number // | means union type (or), can be either string or number
 let data: Data = 'jasmin'; // data can be either string or number; let declares variables with block scope
 
-let array = [1, 2, 3]; // array of numbers
+let array:number[] = [1, 2, 3]; // array of numbers
+
+// array of objects
+interface Banana {
+    id: number; // id is a number type
+    expiryDate: Date; // expiryDate is a Date type
+    isFresh: boolean; // isFresh is a boolean type
+}
+
+const listOfBananas: Banana[] = [{id:1, expiryDate: new Date(), isFresh: true}, {id:2, expiryDate: new Date(), isFresh: false}]; // array of Banana objects
 
